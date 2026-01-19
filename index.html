@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ClarityTimer - A minimalist breathing and meditation timer app. Free, offline-first, fully customizable with no subscriptions required.">
+    <meta name="keywords" content="meditation timer, breathing exercises, mindfulness app, box breathing, 4-7-8 breathing, meditation bell, free meditation app">
+    <title>ClarityTimer - Mindful Breathing & Meditation Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                        <circle cx="20" cy="20" r="6" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span>ClarityTimer</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#breathing">Breathing</a>
+                <a href="#meditation">Meditation</a>
+                <a href="#tracking">Tracking</a>
+                <a href="#download" class="nav-cta">Download Free</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="breathing-circle"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Find Your Calm.<br>One Breath at a Time.</h1>
+            <p class="hero-subtitle">A minimalist breathing and meditation timer that works offline, respects your privacy, and stays completely free. No subscriptions. No accounts. Just clarity.</p>
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-primary">
+                    <span>Download Free</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </a>
+                <a href="#features" class="btn btn-secondary">Explore Features</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Breathing Patterns</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Meditation Timers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free Forever</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why ClarityTimer</span>
+                <h2>Everything you need.<br>Nothing you don't.</h2>
+                <p>Built for practitioners who want a reliable timer, not another meditation subscription.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3>Works Offline</h3>
+                    <p>No internet required. Practice anywhere - on a plane, in nature, or in airplane mode. Your data stays on your device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>No Subscriptions</h3>
+                    <p>Every feature is free. Forever. No paywalls, no premium tiers, no "upgrade to unlock." Just open and breathe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Background Playback</h3>
+                    <p>Turn off your screen or switch apps - your timer keeps running. Bells ring on time, even in the background.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                        </svg>
+                    </div>
+                    <h3>Dark Mode</h3>
+                    <p>Beautiful in any lighting. Choose light, dark, or let it follow your system settings automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>5 Languages</h3>
+                    <p>Available in English, Spanish, German, French, and Portuguese. More languages coming soon.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                    </div>
+                    <h3>Export & Backup</h3>
+                    <p>Your data belongs to you. Export everything as JSON, import on another device, or keep a backup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breathing Exercises Section -->
+    <section id="breathing" class="breathing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Breathing Exercises</span>
+                <h2>Science-backed techniques<br>for any moment.</h2>
+                <p>From Navy SEALs box breathing to Dr. Weil's 4-7-8 method. Eight pre-built patterns, or create your own.</p>
+            </div>
+
+            <div class="breathing-patterns">
+                <div class="pattern-card">
+                    <div class="pattern-visual">
+                        <div class="pattern-circle" data-pattern="4-4-4-4">
+                            <span class="pattern-phase">Inhale</span>
+                        </div>
+                    </div>
+                    <div class="pattern-info">
+                        <h3>Box Breathing</h3>
+                        <span class="pattern-timing">4-4-4-4</span>
+                        <p>Used by Navy SEALs for stress management and focus. Equal inhale, hold, exhale, and hold phases.</p>
+                        <span class="pattern-use">Best for: Focus & Calm</span>
+                    </div>
+                </div>
+
+                <div class="pattern-card">
+                    <div class="pattern-visual">
+                        <div class="pattern-circle" data-pattern="4-7-8-0">
+                            <span class="pattern-phase">Inhale</span>
+                        </div>
+                    </div>
+                    <div class="pattern-info">
+                        <h3>4-7-8 Breathing</h3>
+                        <span class="pattern-timing">4-7-8</span>
+                        <p>Dr. Andrew Weil's famous relaxation technique. Activates your parasympathetic nervous system.</p>
+                        <span class="pattern-use">Best for: Sleep & Relaxation</span>
+                    </div>
+                </div>
+
+                <div class="pattern-card">
+                    <div class="pattern-visual">
+                        <div class="pattern-circle" data-pattern="2-0-5-0">
+                            <span class="pattern-phase">Inhale</span>
+                        </div>
+                    </div>
+                    <div class="pattern-info">
+                        <h3>Physiological Sigh</h3>
+                        <span class="pattern-timing">2-0-5</span>
+                        <p>Quick stress relief backed by Stanford research. Double inhale followed by a long exhale.</p>
+                        <span class="pattern-use">Best for: Instant Calm</span>
+                    </div>
+                </div>
+
+                <div class="pattern-card">
+                    <div class="pattern-visual">
+                        <div class="pattern-circle" data-pattern="5-0-5-0">
+                            <span class="pattern-phase">Inhale</span>
+                        </div>
+                    </div>
+                    <div class="pattern-info">
+                        <h3>Resonance Breathing</h3>
+                        <span class="pattern-timing">5-0-5</span>
+                        <p>Optimizes heart rate variability at 6 breaths per minute. The sweet spot for coherence.</p>
+                        <span class="pattern-use">Best for: HRV & Balance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-patterns">
+                <h4>Plus 4 more patterns included:</h4>
+                <div class="pattern-chips">
+                    <span class="chip">Coherent Breathing (6-0-6)</span>
+                    <span class="chip">Relaxation Breath (4-0-8)</span>
+                    <span class="chip">Energizing Breath (2-0-4)</span>
+                    <span class="chip">Triangle Breathing (4-4-4)</span>
+                </div>
+            </div>
+
+            <div class="custom-section">
+                <div class="custom-content">
+                    <h3>Create Your Own Patterns</h3>
+                    <p>Build unlimited custom breathing patterns with precise control over every phase. Set inhale, hold, exhale, and post-exhale durations from 0-30 seconds each. Save your favorites and use them instantly.</p>
+                    <ul class="custom-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Custom phase durations (1-30 seconds)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Session length up to 120 minutes
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Custom audio cues per phase
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Custom vibration patterns
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom-visual">
+                    <div class="builder-preview">
+                        <div class="builder-row">
+                            <span class="builder-label">Inhale</span>
+                            <div class="builder-slider">
+                                <div class="slider-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="builder-value">4s</span>
+                        </div>
+                        <div class="builder-row">
+                            <span class="builder-label">Hold</span>
+                            <div class="builder-slider">
+                                <div class="slider-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="builder-value">7s</span>
+                        </div>
+                        <div class="builder-row">
+                            <span class="builder-label">Exhale</span>
+                            <div class="builder-slider">
+                                <div class="slider-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="builder-value">8s</span>
+                        </div>
+                        <div class="builder-row">
+                            <span class="builder-label">Hold</span>
+                            <div class="builder-slider">
+                                <div class="slider-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="builder-value">0s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meditation Timer Section -->
+    <section id="meditation" class="meditation-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Meditation Timer</span>
+                <h2>Simple timers.<br>Beautiful bells.</h2>
+                <p>Seven pre-built meditation timers from 5 to 60 minutes. Six distinct bell sounds. Create custom timers with interval bells at any point.</p>
+            </div>
+
+            <div class="timer-showcase">
+                <div class="timer-display">
+                    <div class="timer-ring">
+                        <svg viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="4"
+                                    stroke-dasharray="565.48" stroke-dashoffset="141.37" stroke-linecap="round"
+                                    transform="rotate(-90 100 100)" class="timer-progress"/>
+                        </svg>
+                        <div class="timer-center">
+                            <span class="timer-time">15:00</span>
+                            <span class="timer-label">Deep Session</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timer-info">
+                    <h3>Pre-built Timers</h3>
+                    <div class="timer-list">
+                        <div class="timer-item active">
+                            <span class="timer-name">5-Minute Quick</span>
+                            <span class="timer-bells">Start & End bells</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">10-Minute Focus</span>
+                            <span class="timer-bells">5-min interval</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">15-Minute Deep</span>
+                            <span class="timer-bells">Start & End bells</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">20-Minute Standard</span>
+                            <span class="timer-bells">5-min intervals</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">30-Minute Extended</span>
+                            <span class="timer-bells">10-min intervals</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">45-Minute Long</span>
+                            <span class="timer-bells">15-min intervals</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-name">1-Hour Deep Dive</span>
+                            <span class="timer-bells">20-min intervals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bells-section">
+                <h3>6 Meditation Bell Sounds</h3>
+                <p>Choose the perfect bell for your practice. Each one carefully selected for its meditative quality.</p>
+                <div class="bells-grid">
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <span>Tibetan Bowl</span>
+                    </div>
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <span>Zen Bell</span>
+                    </div>
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <span>Gong</span>
+                    </div>
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <span>One Bell</span>
+                    </div>
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <span>Two Bells</span>
+                    </div>
+                    <div class="bell-card">
+                        <div class="bell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <span>Three Bells</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="haptics-section">
+                <h3>Haptic Feedback</h3>
+                <p>Feel your breath with 5 vibration patterns. Perfect for silent practice or when you can't use audio.</p>
+                <div class="haptic-chips">
+                    <span class="chip">Single Tap</span>
+                    <span class="chip">Double Tap</span>
+                    <span class="chip">Staccato</span>
+                    <span class="chip">Crescendo</span>
+                    <span class="chip">None</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Section -->
+    <section id="tracking" class="tracking-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Session Tracking</span>
+                <h2>Build consistency.<br>See your progress.</h2>
+                <p>Every session is automatically logged. Track your minutes, build streaks, and watch your practice grow.</p>
+            </div>
+
+            <div class="tracking-showcase">
+                <div class="stats-card">
+                    <h3>Your Mindful Minutes</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-value">15</span>
+                            <span class="stat-period">Today</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">87</span>
+                            <span class="stat-period">This Week</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">342</span>
+                            <span class="stat-period">This Month</span>
+                        </div>
+                        <div class="stat-box highlight">
+                            <span class="stat-value">2,847</span>
+                            <span class="stat-period">All Time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="streaks-card">
+                    <h3>Streaks</h3>
+                    <p>Build momentum with consecutive practice tracking.</p>
+                    <div class="streaks-grid">
+                        <div class="streak-item">
+                            <div class="streak-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <span class="streak-value">14</span>
+                            <span class="streak-label">Day Streak</span>
+                        </div>
+                        <div class="streak-item">
+                            <div class="streak-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <span class="streak-value">6</span>
+                            <span class="streak-label">Week Streak</span>
+                        </div>
+                        <div class="streak-item">
+                            <div class="streak-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <span class="streak-value">3</span>
+                            <span class="streak-label">Month Streak</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-features">
+                <div class="history-feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h4>Calendar View</h4>
+                    <p>Browse your history by month with daily session counts and total minutes per day.</p>
+                </div>
+                <div class="history-feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"/>
+                            <line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h4>Session History</h4>
+                    <p>Detailed log of every session with pattern name, duration, and completion status.</p>
+                </div>
+                <div class="history-feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h4>Data Export</h4>
+                    <p>Export your entire history as JSON. Import on another device or keep a backup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="customization-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Personalization</span>
+                <h2>Make it yours.</h2>
+                <p>Seven beautiful color themes, light and dark modes, and complete control over your audio and haptic preferences.</p>
+            </div>
+
+            <div class="themes-showcase">
+                <h3>Color Themes</h3>
+                <div class="theme-grid">
+                    <div class="theme-swatch" style="--theme-color: #7B9EBD" data-name="Blue">
+                        <div class="swatch-inner"></div>
+                        <span>Blue</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #8FAE8B" data-name="Green">
+                        <div class="swatch-inner"></div>
+                        <span>Green</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #9B8AA6" data-name="Purple">
+                        <div class="swatch-inner"></div>
+                        <span>Purple</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #C4A484" data-name="Orange">
+                        <div class="swatch-inner"></div>
+                        <span>Orange</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #C9A9A6" data-name="Pink">
+                        <div class="swatch-inner"></div>
+                        <span>Pink</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #D4B86A" data-name="Yellow">
+                        <div class="swatch-inner"></div>
+                        <span>Yellow</span>
+                    </div>
+                    <div class="theme-swatch" style="--theme-color: #9A9A9A" data-name="Grey">
+                        <div class="swatch-inner"></div>
+                        <span>Grey</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reminders-feature">
+                <div class="reminders-content">
+                    <h3>Daily Reminders</h3>
+                    <p>Set up to 4 daily reminders to keep your practice consistent. Choose specific times and days - daily, weekdays only, weekends, or custom.</p>
+                    <div class="reminder-example">
+                        <div class="reminder-item">
+                            <span class="reminder-time">7:00 AM</span>
+                            <span class="reminder-days">Weekdays</span>
+                        </div>
+                        <div class="reminder-item">
+                            <span class="reminder-time">9:00 PM</span>
+                            <span class="reminder-days">Daily</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reminders-visual">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="reminder-icon">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        <line x1="12" y1="2" x2="12" y2="4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <h2>Start your practice today.</h2>
+                <p>Download ClarityTimer free on iOS, Android, or use it on the web. No account required.</p>
+
+                <div class="download-buttons">
+                    <a href="#" class="download-btn app-store">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-small">Download on the</span>
+                            <span class="btn-large">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn play-store">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-small">Get it on</span>
+                            <span class="btn-large">Google Play</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn web-app">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-small">Use in</span>
+                            <span class="btn-large">Browser</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="support-section">
+                    <p>ClarityTimer is free and always will be. If you find it helpful, consider supporting development:</p>
+                    <a href="https://ko-fi.com/" class="support-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+                        </svg>
+                        Support on Ko-fi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                                <circle cx="20" cy="20" r="6" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span>ClarityTimer</span>
+                    </div>
+                    <p>A minimalist breathing and meditation timer. Free, offline-first, and built for practitioners.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>App</h4>
+                        <a href="#features">Features</a>
+                        <a href="#breathing">Breathing</a>
+                        <a href="#meditation">Meditation</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:support@claritytimer.app">Contact</a>
+                        <a href="https://ko-fi.com/" target="_blank" rel="noopener">Donate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ClarityTimer. Made with mindfulness.</p>
+                <p class="version">Version 1.1.4</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
