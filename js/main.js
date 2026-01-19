@@ -156,70 +156,80 @@ function initScrollAnimations() {
  */
 function initTimerDemo() {
     const timerTime = document.querySelector('.timer-time');
+    const timerLabel = document.querySelector('.timer-label');
     const timerProgress = document.querySelector('.timer-progress');
     const timerItems = document.querySelectorAll('.timer-item');
 
     if (!timerTime || !timerProgress || !timerItems.length) return;
 
+    // Duration in minutes - ring represents proportion of 60 minutes (like a clock face)
+    const maxDuration = 60;
     const timers = [
-        { name: '5-Minute Quick', time: '5:00', progress: 0 },
-        { name: '10-Minute Focus', time: '10:00', progress: 0 },
-        { name: '15-Minute Deep', time: '15:00', progress: 25 },
-        { name: '20-Minute Standard', time: '20:00', progress: 0 },
-        { name: '30-Minute Extended', time: '30:00', progress: 0 },
-        { name: '45-Minute Long', time: '45:00', progress: 0 },
-        { name: '1-Hour Deep Dive', time: '60:00', progress: 0 }
+        { name: 'Quick Session', time: '5:00', duration: 5 },
+        { name: 'Focus Session', time: '10:00', duration: 10 },
+        { name: 'Deep Session', time: '15:00', duration: 15 },
+        { name: 'Standard Session', time: '20:00', duration: 20 },
+        { name: 'Extended Session', time: '30:00', duration: 30 },
+        { name: 'Long Session', time: '45:00', duration: 45 },
+        { name: 'Deep Dive', time: '60:00', duration: 60 }
     ];
 
-    let currentIndex = 2; // Start with 15-Minute Deep
+    let currentIndex = 0;
+    const circumference = 565.48;
 
-    function updateTimer(index) {
+    function updateTimer(index, animate = true) {
         const timer = timers[index];
 
         // Update time display
         timerTime.textContent = timer.time;
 
-        // Update progress ring (565.48 is the circumference)
-        const offset = 565.48 * (1 - timer.progress / 100);
-        timerProgress.style.strokeDashoffset = offset;
+        // Update label
+        if (timerLabel) {
+            timerLabel.textContent = timer.name;
+        }
 
         // Update active state
         timerItems.forEach((item, i) => {
             item.classList.toggle('active', i === index);
         });
+
+        // Calculate fill percentage based on duration (like a clock face)
+        // 5 min = 8.33%, 15 min = 25%, 30 min = 50%, 60 min = 100%
+        const fillPercent = (timer.duration / maxDuration) * 100;
+
+        setProgress(fillPercent, animate);
+    }
+
+    function setProgress(fillPercent, animate = true) {
+        const offset = circumference * (1 - fillPercent / 100);
+
+        if (!animate) {
+            timerProgress.style.strokeDashoffset = offset;
+            return;
+        }
+
+        // Reset to empty, then animate to the target fill (clock-face behavior).
+        timerProgress.style.transition = 'none';
+        timerProgress.style.strokeDashoffset = circumference;
+        timerProgress.getBoundingClientRect();
+        timerProgress.style.transition = '';
+        timerProgress.style.strokeDashoffset = offset;
     }
 
     // Click handlers for timer items
     timerItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            currentIndex = index;
-            // Simulate random progress
-            timers[index].progress = Math.floor(Math.random() * 80) + 10;
-            updateTimer(index);
-        });
+        item.style.cursor = 'pointer';
 
-        item.addEventListener('mouseenter', () => {
-            item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            if (currentIndex !== index) {
+                currentIndex = index;
+                updateTimer(index);
+            }
         });
     });
 
-    // Animate the default timer progress
-    setTimeout(() => {
-        animateProgress(25);
-    }, 1000);
-
-    function animateProgress(targetProgress) {
-        let currentProgress = 0;
-        const interval = setInterval(() => {
-            currentProgress += 1;
-            const offset = 565.48 * (1 - currentProgress / 100);
-            timerProgress.style.strokeDashoffset = offset;
-
-            if (currentProgress >= targetProgress) {
-                clearInterval(interval);
-            }
-        }, 30);
-    }
+    // Initialize with first timer (5 min = ~8% of the ring)
+    updateTimer(0, false);
 }
 
 /**
@@ -366,11 +376,13 @@ function initStatsCounter() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = entry.target;
-                const finalValue = target.textContent;
+                const originalText = target.textContent;
+                const finalValue = originalText.replace(/,/g, '').replace(/[^0-9]/g, '');
+                const suffix = originalText.replace(/[0-9,]/g, '');
 
                 // Check if it's a number we can animate
                 if (!isNaN(parseInt(finalValue))) {
-                    animateNumber(target, parseInt(finalValue));
+                    animateNumber(target, parseInt(finalValue), suffix);
                 }
 
                 observer.unobserve(target);
@@ -381,7 +393,7 @@ function initStatsCounter() {
     statNumbers.forEach(el => observer.observe(el));
 }
 
-function animateNumber(element, target) {
+function animateNumber(element, target, suffix = '') {
     const duration = 1500;
     const start = 0;
     const startTime = performance.now();
@@ -395,15 +407,13 @@ function animateNumber(element, target) {
         const current = Math.floor(start + (target - start) * easeProgress);
 
         // Format with commas for large numbers
-        element.textContent = current.toLocaleString();
+        element.textContent = current.toLocaleString() + suffix;
 
         if (progress < 1) {
             requestAnimationFrame(update);
         } else {
             // Ensure final value matches original
-            if (target >= 1000) {
-                element.textContent = target.toLocaleString();
-            }
+            element.textContent = target.toLocaleString() + suffix;
         }
     }
 
